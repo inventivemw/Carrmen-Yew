@@ -1,0 +1,33 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 2904571, 2014-10-18T06:36:34-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2904571
+ * Licensed pageviews: 10,000
+ * 
+ * © 2014 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/2c51fb");
+ 
+@font-face {
+	font-family: 'adagio-slab-black';
+	src: url('../fonts/adagio-slab-black.otf');
+}
+
+@font-face {
+	font-family: 'adagio-slab-medium';
+	src: url('../fonts/adagio-slab-medium.otf');
+}
+ 
+@font-face {
+	font-family: 'adagio-slab-italic';
+	src: url('../fonts/adagio-slab-medium-italic.otf');
+}
+ 

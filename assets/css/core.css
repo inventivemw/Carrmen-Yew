@@ -1,0 +1,281 @@
+/*
+    
+    Carrmen Yew - 2014
+    ----------------------------------------------------------------------------
+    
+    Style Index
+
+    $1 - Typography & Colour
+    $2 - Header and Navigation
+    $3 - Structure
+
+    $M - Miscellaneous
+    $0 - Media Queries
+
+*/
+@import url("bootstrap.min.css");
+@import url("bootstrap-responsive.min.css");
+/*------------------------------------------------------------------------------
+ $1 - Typography & Colour
+------------------------------------------------------------------------------*/
+body {
+  background: #ececec;
+  color: #262626;
+  font-family: "adagio-slab-medium", serif;
+  font-size: 16.18px;
+  font-weight: 300; }
+
+p {
+  color: #262626;
+  line-height: 1.35em;
+  margin-bottom: 0.675em; }
+  p a {
+    border-bottom: 1px solid black;
+    color: #262626;
+    padding-bottom: 2px; }
+    p a:hover {
+      color: black;
+      text-decoration: none; }
+
+h1, h2, h3, h4, h5 {
+  color: black;
+  font-family: "adagio-slab-black", serif;
+  line-height: 1.25em;
+  margin: 0;
+  padding: 0.25em 0; }
+
+h2 {
+  font-weight: 600;
+  margin: 10px 0; }
+
+img {
+  width: 100%; }
+
+/*------------------------------------------------------------------------------
+ $2 - Header and Navigation
+------------------------------------------------------------------------------*/
+#masthead {
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 275px 0;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+  background-color: #fdef4b;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fdef4b), color-stop(100%, white));
+  background-image: -webkit-linear-gradient(top, #fdef4b, white);
+  background-image: linear-gradient(to bottom,#fdef4b, white); }
+  @media screen and (max-width: 768px) {
+    #masthead {
+      padding: 100px 0; } }
+  @media screen and (max-width: 550px) {
+    #masthead {
+      padding: 150px 0; } }
+  #masthead h1 {
+    font-size: 3.2em;
+    color: black;
+    padding: 0; }
+  #masthead h2 {
+    color: black;
+    text-transform: lowercase; }
+
+header {
+  overflow: hidden;
+  padding: 5px; }
+  header h1 {
+    font-size: 2.4rem;
+    float: left;
+    padding: 0.025em 0; }
+    header h1 a {
+      color: black; }
+      header h1 a:hover {
+        color: #fdef4b;
+        text-decoration: none; }
+  header .menu {
+    font-family: "adagio-slab-medium", serif;
+    font-size: 1.3rem;
+    float: right;
+    padding: 20px; }
+    header .menu > li {
+      display: inline-block;
+      font-size: 1.3em; }
+      header .menu > li a {
+        color: black;
+        padding: 0.5em 1em; }
+
+#header-wrapper {
+  padding: 20px; }
+
+/*------------------------------------------------------------------------------
+ $3 - Structure
+------------------------------------------------------------------------------*/
+#main {
+  background: #fff;
+  list-style-type: none;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  top: 800px;
+  z-index: 2; }
+  #main .thumbnail {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    background: none;
+    border: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 5px;
+    position: relative;
+    width: 100%; }
+    #main .thumbnail .title {
+      color: #fff;
+      display: block;
+      font-family: "adagio-slab-black", serif;
+      font-size: 1.6em;
+      font-weight: 700;
+      left: 0;
+      line-height: 1.25em;
+      height: 100%;
+      padding: 15%;
+      position: absolute;
+      text-align: center;
+      text-decoration: underline;
+      top: 20%;
+      width: 100%; }
+    #main .thumbnail img {
+      height: 100%;
+      width: 100%; }
+    #main .thumbnail a {
+      -webkit-transition: all 0.25s;
+      -moz-transition: all 0.25s;
+      transition: all 0.25s; }
+      #main .thumbnail a:hover {
+        opacity: 0.75; }
+
+#projects-wrapper {
+  list-style-type: none;
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 20px;
+  position: relative;
+  z-index: 2; }
+  #projects-wrapper #sidebar #meta-desc {
+    border-top: 1px solid #e9e9e9;
+    line-height: 2em;
+    padding: 1em 0; }
+  @media screen and (max-width: 905px) {
+    #projects-wrapper #sidebar {
+      float: none;
+      max-width: 100%;
+      text-align: center; } }
+  @media screen and (max-width: 905px) {
+    #projects-wrapper #main-content {
+      max-width: 100%;
+      float: none; } }
+  #projects-wrapper #main-content img {
+    border-bottom: 1px solid #e9e9e9;
+    margin: 10px 0;
+    padding-bottom: 20px;
+    width: 100%; }
+  #projects-wrapper #main-content .video-container {
+    border-bottom: 1px solid #e9e9e9;
+    margin: 10px 0;
+    padding-bottom: 20px; }
+    #projects-wrapper #main-content .video-container .video-wrapper {
+      position: relative;
+      padding-bottom: 52.25%;
+      padding-top: 25px;
+      height: 0; }
+      #projects-wrapper #main-content .video-container .video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; }
+
+#page-wrapper {
+  margin: 0 auto;
+  max-width: 960px; }
+
+#projects {
+  list-style-type: none;
+  padding: 0; }
+
+.nextprev {
+  float: right; }
+  .nextprev a {
+    font-size: 1.4em;
+    color: black; }
+
+a.goToTop {
+  border-bottom: 1px solid transparent;
+  color: #262626;
+  display: inline-block;
+  margin: 20px 0;
+  position: relative;
+  z-index: 9999; }
+  a.goToTop:hover {
+    border-bottom: 1px solid black;
+    text-decoration: none; }
+
+.desc {
+  float: right; }
+  .desc h1 {
+    color: black;
+    font-size: 2rem;
+    font-weight: 600; }
+  .desc .text {
+    max-width: 420px; }
+  .desc .meta {
+    font-size: 0.8em;
+    list-style-type: none;
+    margin: 50px 0 0;
+    padding: 0; }
+    .desc .meta li {
+      display: inline-block;
+      margin-right: 1em; }
+
+/*------------------------------------------------------------------------------
+ $4 - Footer
+------------------------------------------------------------------------------*/
+footer {
+  border-top: 1px solid #e9e9e9;
+  color: #262626;
+  margin: 10px 0;
+  overflow: hidden;
+  padding: 10px;
+  text-align: center; }
+  @media screen and (max-width: 768px) {
+    footer span, footer .footer-right {
+      display: block;
+      float: none;
+      text-align: center; } }
+  footer a {
+    color: #262626;
+    margin: 0 0.25em; }
+
+/*------------------------------------------------------------------------------
+ $M - Miscellaneous
+------------------------------------------------------------------------------*/
+#snowden {
+  display: none; }
+  @media screen and (max-width: 768px) {
+    #snowden {
+      display: block; } }
+
+.footer-right {
+  float: right; }
+
+.clearfix {
+  clear: both; }
+
+/*------------------------------------------------------------------------------
+ $0 - Media Queries
+------------------------------------------------------------------------------*/
+/* Retina detection for images */

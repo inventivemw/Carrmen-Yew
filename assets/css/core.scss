@@ -1,0 +1,379 @@
+/*
+    
+    Carrmen Yew - 2014
+    ----------------------------------------------------------------------------
+    
+    Style Index
+
+    $1 - Typography & Colour
+    $2 - Header and Navigation
+    $3 - Structure
+
+    $M - Miscellaneous
+    $0 - Media Queries
+
+*/
+
+@import url("bootstrap.min.css");
+@import url("bootstrap-responsive.min.css");
+@import "bourbon/bourbon";
+
+/*------------------------------------------------------------------------------
+ $1 - Typography & Colour
+------------------------------------------------------------------------------*/
+
+$background: #ececec;
+
+$colour-black: #000;
+$colour-grey: tint(black, 15%);
+$colour-mgrey: tint($colour-grey, 90%);
+$colour-lgrey: tint($colour-grey, 60%);
+$colour-aqua: #45c1b9;
+$carrmen-yellow: #fdef4b;
+
+$font-size: modular-scale(10px, 1, 1.618);
+$font-display: "adagio-slab-black", serif;
+$font-body: "adagio-slab-medium", serif;
+$paragraph-leading: 1.35em;
+$display-leading: 1.25em;
+
+$resolution: 720px;
+
+$break-tiny: 420px;
+$break-small: 550px;
+$break-medium: 768px;
+$break-large: 905px;
+
+body {
+    background: $background;
+    color: $colour-grey;
+    font: {
+        family: $font-body;
+        size: $font-size;
+        weight: 300;
+    }
+}
+
+p {
+    color: $colour-grey;
+    line-height: $paragraph-leading;
+    margin-bottom: $paragraph-leading / 2;
+    a {
+        border-bottom: 1px solid $colour-black;
+        color: $colour-grey;
+        padding-bottom: 2px;
+        &:hover {
+            color: $colour-black;
+            text-decoration: none;
+        }
+    }
+}
+
+h1, h2, h3, h4, h5 {
+    color: $colour-black;
+    font: {
+        family: $font-display;
+    };
+    line-height: $display-leading;
+    margin: 0;
+    padding: 0.25em 0;
+}
+
+h2 {
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+img {
+    width: 100%;
+}
+
+/*------------------------------------------------------------------------------
+ $2 - Header and Navigation
+------------------------------------------------------------------------------*/
+
+#masthead {
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 275px 0;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+    @include linear-gradient(to bottom, $carrmen-yellow, white);
+    @media screen and (max-width: $break-medium) {
+        padding: 100px 0;
+    }
+    @media screen and (max-width: $break-small) {
+        padding: 150px 0;
+    }
+
+    h1 {
+        font-size: 3.2em;
+        color: $colour-black;
+        padding: 0;
+    }
+
+    h2 {
+        color: $colour-black;
+        text-transform: lowercase;
+    }
+}
+
+header {
+    overflow: hidden;
+    padding: 5px;
+
+    h1 {
+        font-size: 2.4rem;
+        float: left;
+        padding: 0.025em 0;
+        a {
+            color: $colour-black;
+            &:hover {
+                color: $carrmen-yellow;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .menu {
+        font-family: $font-body;
+        font-size: 1.3rem;
+        float: right;
+        padding: 20px;
+        > li {
+            display: inline-block;
+            font-size: 1.3em;
+            a {
+                color: $colour-black;
+                padding: 0.5em 1em;
+            }
+        }
+    }
+}
+
+#header-wrapper {
+    padding: 20px;
+}
+
+/*------------------------------------------------------------------------------
+ $3 - Structure
+------------------------------------------------------------------------------*/
+
+#main {
+    background: #fff;
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    top: 800px;
+    z-index: 2;
+    
+    .thumbnail {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        background: none;
+        border: none;
+        margin: 0;
+        overflow: hidden;
+        padding: 5px;
+        position: relative;
+        width: 100%;
+
+        .title {
+            color: #fff;
+            display: block;
+            font: {
+                family: $font-display;
+                size: 1.6em;
+                weight: 700;
+            }
+            left: 0;
+            line-height: 1.25em;
+            height: 100%;
+            padding: 15%;
+            position: absolute;
+            text-align: center;
+            text-decoration: underline;
+            top: 20%;
+            width: 100%;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+
+        a {
+            @include transition ( all 0.25s );
+            &:hover {
+                opacity: 0.75;
+            }
+        }
+    }
+}
+
+#projects-wrapper {
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+
+    #sidebar {
+        #meta-desc {
+            border-top: 1px solid $colour-mgrey;
+            line-height: 2em;
+            padding: 1em 0;
+        }
+        @media screen and (max-width: $break-large) {
+            float: none;
+            max-width: 100%;
+            text-align: center;
+        }
+    }
+
+    #main-content {
+        @media screen and (max-width: $break-large) {
+            max-width: 100%;
+            float: none;
+        }
+        img {
+            border-bottom: 1px solid $colour-mgrey;
+            margin: 10px 0;
+            padding-bottom: 20px;
+            width: 100%;
+        }
+        .video-container {
+            border-bottom: 1px solid $colour-mgrey;
+            margin: 10px 0;
+            padding-bottom: 20px;
+            .video-wrapper {
+                position: relative;
+                padding-bottom: 52.25%;
+                padding-top: 25px;
+                height: 0;
+                iframe {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+#page-wrapper {
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+#projects {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nextprev {
+    float: right;
+    a {
+        font-size: 1.4em;
+        color: $colour-black;
+    }
+}
+
+a.goToTop {
+    border-bottom: 1px solid rgba(0,0,0,0);
+    color: $colour-grey;
+    display: inline-block;
+    margin: 20px 0;
+    position: relative;
+    z-index: 9999;
+    &:hover {
+        border-bottom: 1px solid $colour-black;
+        text-decoration: none;
+    }
+}
+
+.desc {
+    float: right;
+    
+    h1 {
+        color: $colour-black;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    .text {
+        max-width: 420px;
+    }
+
+    .meta {
+        font-size: 0.8em;
+        list-style-type: none;
+        margin: 50px 0 0;
+        padding: 0;
+        li {
+            display: inline-block;
+            margin-right: 1em;
+        }
+    }
+}
+
+/*------------------------------------------------------------------------------
+ $4 - Footer
+------------------------------------------------------------------------------*/
+
+footer {
+    border-top: 1px solid $colour-mgrey;
+    color: $colour-grey;
+    margin: 10px 0;
+    overflow: hidden;
+    padding: 10px;
+    text-align: center;
+    span, .footer-right {
+        @media screen and (max-width: $break-medium) {
+            display: block;
+            float: none;
+            text-align: center;
+        }
+    }
+    a {
+        color: $colour-grey;
+        margin: 0 0.25em;
+    }
+}
+
+/*------------------------------------------------------------------------------
+ $M - Miscellaneous
+------------------------------------------------------------------------------*/
+
+#snowden {
+    display: none;
+    @media screen and (max-width: $break-medium) {
+        display: block;
+    }
+}
+
+.footer-right {
+    float: right;
+}
+
+.clearfix {
+    clear: both;
+}
+
+/*------------------------------------------------------------------------------
+ $0 - Media Queries
+------------------------------------------------------------------------------*/
+
+/* Retina detection for images */
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {}
