@@ -4,24 +4,23 @@
 <div id="projects-wrapper">
   <div class="clearfix"></div>
     <div id="sidebar">
-    <div class="desc">
-      <h1><?php echo $page->title()->html() ?></h1>
+      <div class="desc">
+        <h1><?php echo $page->title()->html() ?></h1>
         <div class="text">
           <?php echo $page->text()->kirbytext() ?>
         </div>
+        <ul class="meta cf">
+          <li>Year: <time datetime="<?php echo $page->date('c') ?>"><?php echo $page->date('Y', 'year') ?></time></li>
+          <li>Tags: <?php echo $page->tags() ?></li>
+      </ul>
       </div>
     </div>
     <div id="main-content">
       <?php foreach($page->images()->sortBy('sort', 'asc') as $image): ?>
-      <figure>
+      <div class="thumbnail">
         <img src="<?php echo $image->url() ?>" alt="<?php echo $page->title()->html() ?>">
-      </figure>
+      </div>
       <?php endforeach ?>
-
-      <ul class="meta cf">
-        <li><b>Year:</b> <time datetime="<?php echo $page->date('c') ?>"><?php echo $page->date('Y', 'year') ?></time></li>
-        <li><b>Tags:</b> <?php echo $page->tags() ?></li>
-      </ul>
 
       <nav class="nextprev cf" role="navigation">
         <?php if($prev = $page->prevVisible()): ?>
@@ -33,8 +32,6 @@
       </nav>
     </div>
     <div class="clearfix"></div>
-    <a href="#top" class="goToTop">↑ Top</a>
 </div>
-<div id="snowden"></div>
 
 <?php snippet('footer') ?>

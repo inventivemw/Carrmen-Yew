@@ -1,17 +1,17 @@
-Title: Kirby Starterkit
+Title: Carrmen Yew
 
 ----
 
-Author: Bastian Allgeier GmbH
+Author: Carrmen Yew
 
 ----
 
-Description: This is Kirby's Starterkit.
+Description: The portfolio of Melbourne-based graphic designer, Jessica Bong.
 
 ----
 
-Keywords: Kirby, CMS, file-based
+Keywords: Graphic design, Melbourne design, Publication design, Portfolio, Website, Carrmen Yew
 
 ----
 
-Copyright: © 2009-(date: Year) (link: http://getkirby.com text: Kirby)
+Copyright: Copyright © 2014. All rights reserved.
