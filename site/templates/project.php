@@ -9,10 +9,16 @@
         <div class="text">
           <?php echo $page->text()->kirbytext() ?>
         </div>
-        <ul class="meta cf">
+        <ul class="meta">
           <li>Year: <time datetime="<?php echo $page->date('c') ?>"><?php echo $page->date('Y', 'year') ?></time></li>
-          <li>Tags: <?php echo $page->tags() ?></li>
-      </ul>
+          <?php if(($page->tags() != "")){ ?>
+          <li>Tags:  
+            <?php foreach($page->tags()->split(',') as $tag): ?>
+              <?php echo $tag.', ' ?>
+            <?php endforeach ?>
+          </li>
+          <?php } ?>
+        </ul>
       </div>
     </div>
     <div id="main-content">

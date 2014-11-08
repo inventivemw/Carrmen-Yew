@@ -11,7 +11,6 @@
     <?php echo js('assets/js/jquery.sticky.js') ?>
     <?php echo js('assets/js/retina-1.1.0.min.js') ?>
   </footer>
-</div>
 
 </body>
 </html>
