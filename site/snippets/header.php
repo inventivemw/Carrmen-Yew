@@ -14,7 +14,3 @@
 
 </head>
 <body>
-  <header class="header cf" role="banner">
-    <h1><a href="/">Carrmen Yew</a></h1>
-    <?php snippet('menu') ?>
-  </header>
