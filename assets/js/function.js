@@ -14,11 +14,14 @@ $('a[href*=#]:not([href=#])').click(function() {
     }
 });
 
-$(document).ready(function() {
-    $('#projects-wrapper #sidebar').stickyMojo({footerID: '.footer', contentID: '#projects-wrapper #main-content'});
-
+$(function() {
+    $("img.lazy").lazyload({
+      threshold : 200,
+      effect: "fadeIn"
+  });
 });
 
-$(function() {
-    $("img.lazy").lazyload();
+$(".scrollToTop").click(function() {
+  $("html, body").animate({ scrollTop: 0 }, "slow");
+  return false;
 });

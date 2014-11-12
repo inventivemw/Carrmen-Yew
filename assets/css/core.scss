@@ -95,7 +95,7 @@ img {
 ------------------------------------------------------------------------------*/
 
 #masthead {
-    @include linear-gradient(to bottom, $carrmen-pink, white);
+    background: $carrmen-pink;
     height: 100%;
     position: fixed;
     text-align: center;
@@ -114,11 +114,10 @@ img {
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        max-width: 450px;
+        max-width: 320px;
         img {
             width: 100%;
         }
-
         @media screen and (max-width: $break-medium) {
             top: 25%;
         }
@@ -296,13 +295,11 @@ header {
     }
 }
 
-a.goToTop {
+.scrollToTop {
     border-bottom: 1px solid rgba(0,0,0,0);
     color: $colour-grey;
     display: inline-block;
     margin: 20px 0;
-    position: relative;
-    z-index: 9999;
     &:hover {
         border-bottom: 1px solid $colour-black;
         text-decoration: none;

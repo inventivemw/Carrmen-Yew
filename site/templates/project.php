@@ -3,7 +3,7 @@
 <div id="main">
   <div id="wrapper">
     <div id="content-wrapper">
-      <header class="header cf" role="banner">
+      <header id="top">
           <h1><a href="/">Carrmen Yew</a></h1>
           <?php snippet('menu') ?>
       </header>
@@ -16,13 +16,6 @@
             </div>
             <ul class="meta">
               <li>Year: <time datetime="<?php echo $page->date('c') ?>"><?php echo $page->date('Y', 'year') ?></time></li>
-              <?php if(($page->tags() != "")){ ?>
-              <li>Tags:  
-                <?php foreach($page->tags()->split(',') as $tag): ?>
-                  <?php echo $tag.', ' ?>
-                <?php endforeach ?>
-              </li>
-              <?php } ?>
             </ul>
           </div>
         </div>
@@ -44,7 +37,6 @@
         </div>
         <div class="clearfix"></div>
     </div>
-
   <?php snippet('footer') ?>
   </div>
 </div>
