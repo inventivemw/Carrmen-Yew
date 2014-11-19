@@ -134,10 +134,19 @@ header {
     overflow: hidden;
     padding: 20px;
 
+    @media screen and (max-width: $break-small) {
+        text-align: center;
+    }
+
     h1 {
         font-size: $size-display;
         float: left;
         padding: 0.025em 0;
+
+        @media screen and (max-width: $break-small) {
+            float: none;
+        }
+
         a {
             color: $colour-black;
             &:hover {
@@ -151,6 +160,13 @@ header {
         font-family: $font-body;
         font-size: $font-size;
         float: right;
+        margin: 0;
+        padding: 0;
+
+        @media screen and (max-width: $break-small) {
+            float: none;
+        }
+
         > li {
             display: inline-block;
             a {
@@ -179,6 +195,7 @@ header {
 
 #wrapper {
     background: #fff;
+    padding: 20px;
     position: relative;
     z-index: 3;
 }
@@ -204,10 +221,18 @@ header {
         .desc {
             float: right;
             margin: 20px 0;
+            max-width: 320px;
+            width: 100%;
+
+            @media screen and (max-width: $break-large) {
+                float: none;
+                max-width: 100%;
+            }
             
             h1 {
-                color: $colour-black;
                 border-bottom: 1px solid $colour-black;
+                color: $colour-black;
+                display: inline-block;
                 font-family: $font-body;
                 font-size: $font-size;
                 padding: 0.15em 0;
@@ -234,11 +259,6 @@ header {
             line-height: 2em;
             padding: 1em 0;
         }
-        @media screen and (max-width: $break-large) {
-            float: none;
-            max-width: 100%;
-            text-align: center;
-        }
     }
 }
 
@@ -261,7 +281,7 @@ header {
         display: block;
         font: {
             family: $font-display;
-            size: $size-display;
+            size: $size-display * 0.8;
             weight: 700;
         }
         left: 0;
