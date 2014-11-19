@@ -76,9 +76,15 @@ img {
     max-width: 320px; }
     #masthead .logo img {
       width: 100%; }
+    @media screen and (max-width: 1280px) {
+      #masthead .logo {
+        top: 48%; } }
     @media screen and (max-width: 768px) {
       #masthead .logo {
-        top: 25%; } }
+        top: 40%; } }
+    @media screen and (max-width: 550px) {
+      #masthead .logo {
+        top: 50%; } }
 
 header {
   overflow: hidden;

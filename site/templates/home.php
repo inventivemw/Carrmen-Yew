@@ -3,7 +3,7 @@
 <div id="masthead">
     <div class="logo-wrapper">
       <div class="logo">
-        <img src="<?php echo url('assets/images/c.png') ?>" alt="Carrmen Yew - Graphic Designer" />
+        <img src="<?php echo url('assets/images/c-white.png') ?>" alt="Carrmen Yew - Graphic Designer" />
       </div>
     </div>
 </div>
